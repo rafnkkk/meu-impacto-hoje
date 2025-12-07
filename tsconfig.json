@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOMContentLoadet"],
+    // Lista simplificada e correta para projetos modernos:
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], 
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -12,7 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    // Adicione esta linha para garantir que ele saiba como ler React
+    "jsx": "react-jsx", 
+    "allowJs": true,
+    "checkJs": false,
 
     /* Linting */
     "strict": true,
